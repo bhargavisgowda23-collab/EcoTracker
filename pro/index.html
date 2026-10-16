@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoTrack - Carbon Footprint Monitor</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>🌱 EcoTrack</h1>
+    <p>Smart Community Carbon Footprint Monitoring System</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#calculator">Calculator</a>
+    <a href="#community">Community</a>
+    <a href="#tips">Green Tips</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Track Your Carbon. Protect Our Planet.</h2>
+    <p>Monitor your carbon footprint and help build a greener community.</p>
+    <button type="button" id="scrollToCalculator">
+        Calculate My Footprint
+    </button>
+</section>
+
+<div class="container">
+
+    <!-- DASHBOARD -->
+    <section id="dashboard">
+        <h2 class="section-title">📊 Community Dashboard</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌍 Your Carbon Footprint</h3>
+                <p class="number" id="footprint">0 kg</p>
+                <p>Estimated monthly emissions</p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Electricity Usage</h3>
+                <p class="number" id="electricity">0 kWh</p>
+                <p>Monthly consumption</p>
+            </div>
+
+            <div class="card">
+                <h3>🌳 Green Points</h3>
+                <p class="number" id="points">0</p>
+                <p>Earn points through green activities</p>
+            </div>
+
+            <div class="card">
+                <h3>🏘️ Community Households</h3>
+                <p class="number">120</p>
+                <p>Illustrative demonstration data</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CARBON CALCULATOR -->
+    <section id="calculator">
+        <h2 class="section-title">🧮 Carbon Footprint Calculator</h2>
+
+        <div class="calculator">
+
+            <p>
+                Enter your monthly household consumption to estimate
+                your carbon emissions.
+            </p>
+
+            <form id="carbonForm">
+
+                <label for="units">
+                    Monthly Electricity Consumption (kWh)
+                </label>
+                <input type="number" id="units"
+                       min="0" step="any" value="100" required>
+
+                <label for="fuel">
+                    Monthly Petrol Consumption (litres)
+                </label>
+                <input type="number" id="fuel"
+                       min="0" step="any" value="10" required>
+
+                <label for="travel">
+                    Monthly Bus Travel Distance (km)
+                </label>
+                <input type="number" id="travel"
+                       min="0" step="any" value="20" required>
+
+                <label for="waste">
+                    Household Waste Generated (kg per week)
+                </label>
+                <input type="number" id="waste"
+                       min="0" step="any" value="5" required>
+
+                <button class="calculate-button" type="submit">
+                    Calculate Carbon Footprint
+                </button>
+
+            </form>
+
+            <div class="result" id="result" aria-live="polite">
+                <h3>Your Estimated Carbon Footprint</h3>
+                <p id="total"></p>
+                <p id="breakdown"></p>
+                <p class="advice" id="advice"></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMMUNITY MONITORING -->
+    <section id="community">
+        <h2 class="section-title">🏘️ Community Monitoring</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌱 Community Goal</h3>
+                <p class="number">10%</p>
+                <p>Illustrative target for reducing emissions</p>
+            </div>
+
+            <div class="card">
+                <h3>♻️ Green Activities</h3>
+                <p class="number" id="activities">0</p>
+                <p>Activities recorded on this device</p>
+            </div>
+
+            <div class="card">
+                <h3>🏆 Your Achievement</h3>
+                <p class="number" id="badge">Beginner</p>
+                <p>Your green activity level</p>
+            </div>
+
+        </div>
+
+        <div class="challenge">
+            <h2>🌳 Weekly Green Challenge</h2>
+
+            <p class="challenge-description">
+                Save electricity, use public transport, or recycle
+                household waste.
+            </p>
+
+            <button type="button" id="completeChallenge">
+                Complete Green Challenge (+10 Points)
+            </button>
+
+            <p class="challenge-message"
+               id="challengeMessage" aria-live="polite"></p>
+        </div>
+
+    </section>
+
+    <!-- GREEN TIPS -->
+    <section class="tips-section" id="tips">
+        <h2 class="section-title">💚 Eco-Friendly Recommendations</h2>
+
+        <div class="recommendations">
+
+            <div class="tip">
+                <h3>⚡ Save Electricity</h3>
+                <p>
+                    Switch off unused lights and appliances.
+                    Choose energy-efficient equipment.
+                </p>
+            </div>
+
+            <div class="tip">
+                <h3>🚲 Green Transportation</h3>
+                <p>
+                    Walk, cycle, carpool, or use public transportation
+                    whenever practical.
+                </p>
+            </div>
+
+            <div class="tip">
+                <h3>♻️ Reduce Waste</h3>
+                <p>
+                    Separate recyclable waste, reuse materials,
+                    and avoid unnecessary packaging.
+                </p>
+            </div>
+
+            <div class="tip">
+                <h3>🌳 Plant Trees</h3>
+                <p>
+                    Participate in community tree-planting
+                    and tree-maintenance activities.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>🌱 EcoTrack | Smart Community Carbon Footprint Monitoring System</p>
+    <p class="footer-tagline">
+        Together for a cleaner and greener future.
+    </p>
+</footer>
+
+</body>
+</html>
